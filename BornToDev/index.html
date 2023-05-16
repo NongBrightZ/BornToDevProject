@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>GPA-Calculator</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="headbox">
+            <h3>BornToDev Project</h3>
+            <h1>Teerat Mahachok</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="tab tab-1">
+            <table id="table" class="table">
+                <tr>
+                    <th>รายวิชา</th>
+                    <th>เกรด</th>
+                    <th>หน่วยกิต</th>
+                </tr>
+                <tr>
+                    <td>Math</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </table>
+        </div><br>
+        <div class="tab tab-2">
+            <label>รายวิชา :</label>
+            <input type="text" name="subject" id="subject">
+            <label>เกรด :</label>
+            <input type="text" name="grade" id="grade">
+            <label>หน่วยกิต :</label>
+            <input type="text" name="weight" id="weight">
+
+            <button onclick="addHtmlTableRow();">เพิ่ม</button>
+            <button onclick="editHtmlTableSelectedRow();">แก้ไข</button>
+            <button onclick="removeSelectedRow();">ล้างแถว</button>
+            <button onclick="GPAcal();">หาเกรดเฉลี่ย</button>
+        </div>
+    </div><br>
+    <div class="container cal">
+        <div class="tab tab-3">
+            <table id="Cal" class="table">
+                <tr>
+                    <th>หน่วยกิตสะสม</th>
+                    <th>เกรดเฉลี่ย</th>
+                </tr>
+                <tr>
+                    <td id="wsum">ยังไม่มีข้อมูล</td>
+                    <td id="gpa">ยังไม่มีข้อมูล</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
